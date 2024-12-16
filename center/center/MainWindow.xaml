@@ -1,0 +1,28 @@
+﻿<Window x:Class="center.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:center"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid Background="LightGreen">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Orientation="Vertical" Grid.Column="1" Margin="5" Background="White">
+            <Label Content="Center Parcs" FontSize="40" Foreground="Green"/>
+            <Label Content="Type woning" Margin="5"/>
+            <ComboBox x:Name="buildingBox" Margin="5" SelectionChanged="buildingBox_SelectionChanged"/>
+            <Label Content="Aantal dagen" Margin="5"/>
+            <ComboBox x:Name="daysBox" Margin="5" SelectionChanged="buildingBox_SelectionChanged"/> 
+            <Label Content="Prijs" Margin="5"/>
+            <TextBox x:Name="resultTextBox" Margin="5" IsEnabled="false"/>
+        </WrapPanel>
+        <Label x:Name="timeLabel" Grid.Column="1" Content="" HorizontalAlignment="Center" Margin="0,323,0,0" VerticalAlignment="Top" Width="70"/>
+
+    </Grid>
+</Window>
